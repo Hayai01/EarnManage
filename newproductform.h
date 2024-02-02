@@ -2,7 +2,7 @@
 #define NEWPRODUCTFORM_H
 
 #include <QWidget>
-#include <inventory.h>
+#include "inventory.h"
 
 namespace Ui {
 class NewProductForm;
@@ -15,6 +15,9 @@ class NewProductForm : public QWidget
 public:
     explicit NewProductForm(QWidget *parent = nullptr);
     ~NewProductForm();
+
+private slots:
+    void on_pushButton_released();
 
 private:
     Ui::NewProductForm *ui;

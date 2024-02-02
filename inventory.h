@@ -11,6 +11,7 @@ private:
 public:
     Inventory();
     void addProduct(Product* newProduct);
+    void deleteProduct(string SKU);
 };
 
 #endif // INVENTORY_H

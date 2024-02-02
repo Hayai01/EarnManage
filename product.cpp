@@ -5,80 +5,84 @@ Product::Product()
 
 }
 
-Product::Product(const string &SKU, const string &name, const string &description, float sellingPrice, float purchasePrice, int units) : SKU(SKU),
-    name(name),
-    description(description),
-    sellingPrice(sellingPrice),
-    purchasePrice(purchasePrice),
-    units(units)
+
+Product::Product(const QString &SKU, const QString &name, const QString &description, float sellingPrice, float purchasePrice, int units) : m_SKU(SKU),
+    m_name(name),
+    m_description(description),
+    m_sellingPrice(sellingPrice),
+    m_purchasePrice(purchasePrice),
+    m_units(units)
 {}
 
-const string &Product::getSKU() const
+
+
+const QString &Product::SKU() const
 {
-    return SKU;
+    return m_SKU;
 }
 
-void Product::setSKU(const string &newSKU)
+void Product::setSKU(const QString &newSKU)
 {
-    SKU = newSKU;
+    m_SKU = newSKU;
 }
 
-const string &Product::getName() const
+const QString &Product::name() const
 {
-    return name;
+    return m_name;
 }
 
-void Product::setName(const string &newName)
+void Product::setName(const QString &newName)
 {
-    name = newName;
+    m_name = newName;
 }
 
-const string &Product::getDescription() const
+const QString &Product::description() const
 {
-    return description;
+    return m_description;
 }
 
-void Product::setDescription(const string &newDescription)
+void Product::setDescription(const QString &newDescription)
 {
-    description = newDescription;
+    m_description = newDescription;
 }
 
-float Product::getSellingPrice() const
+float Product::sellingPrice() const
 {
-    return sellingPrice;
+    return m_sellingPrice;
 }
 
 void Product::setSellingPrice(float newSellingPrice)
 {
-    sellingPrice = newSellingPrice;
+    m_sellingPrice = newSellingPrice;
 }
 
-float Product::getPurchasePrice() const
+float Product::purchasePrice() const
 {
-    return purchasePrice;
+    return m_purchasePrice;
 }
 
 void Product::setPurchasePrice(float newPurchasePrice)
 {
-    purchasePrice = newPurchasePrice;
+    m_purchasePrice = newPurchasePrice;
 }
 
-int Product::getUnits() const
+int Product::units() const
 {
-    return units;
+    return m_units;
 }
 
 void Product::setUnits(int newUnits)
 {
-    units = newUnits;
+    m_units = newUnits;
 }
 
-void Product::showInformation()
+QString Product::showInformation()
 {
-        cout << "SKU: " << SKU << endl;
-        cout << "Name: " << name << endl;
-        cout << "Description: " << description << endl;
-        cout << "Selling Price: " << sellingPrice << endl;
-        cout << "Purchase Price: " << purchasePrice << endl;
-        cout << "Units: " << units << endl;
+    QString sellingPriceStr = QString::number(m_sellingPrice);
+    QString purchasePriceStr = QString::number(m_purchasePrice);
+    QString unitsStr = QString::number(m_units);
+
+    return m_SKU + " " + m_name + " " + m_description + " " + sellingPriceStr + " " + purchasePriceStr + " " + unitsStr;
 }
+
+
