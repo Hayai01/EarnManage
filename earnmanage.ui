@@ -48,7 +48,7 @@
   </widget>
   <action name="actionAdd_Product">
    <property name="icon">
-    <iconset resource="imagenes.qrc">
+    <iconset>
      <normaloff>:/imagenes/nuevo.png</normaloff>:/imagenes/nuevo.png</iconset>
    </property>
    <property name="text">
@@ -66,8 +66,6 @@
    </property>
   </action>
  </widget>
- <resources>
-  <include location="imagenes.qrc"/>
- </resources>
+ <resources/>
  <connections/>
 </ui>

@@ -2,16 +2,18 @@
 #define INVENTORY_H
 
 #include "product.h"
-#include "vector"
+#include "QVector"
 
 class Inventory
 {
 private:
-    vector<Product*> listProducts;
+    QVector<Product*> listProducts;
 public:
     Inventory();
     void addProduct(Product* newProduct);
     void deleteProduct(string SKU);
+    void printProducts() const;
+    const QVector<Product*>& getProducts() const;
 };
 
 #endif // INVENTORY_H

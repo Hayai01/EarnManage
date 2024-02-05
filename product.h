@@ -12,7 +12,7 @@ public:
     Product(const QString &SKU, const QString &name, const QString &description, float sellingPrice, float purchasePrice, int units);
 
 
-    virtual QString showInformation();
+    virtual QString showInformation() const;
     const QString &SKU() const;
     void setSKU(const QString &newSKU);
     const QString &name() const;

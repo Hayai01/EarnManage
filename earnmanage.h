@@ -2,7 +2,9 @@
 #define EARNMANAGE_H
 
 #include <QMainWindow>
-#include "product.h"
+#include "inventory.h"
+#include "addproductform.h"
+#include "newproductform.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class EarnManage; }
@@ -20,8 +22,11 @@ public:
 private slots:
     void on_actionAdd_Product_triggered();
 
+    void on_actionIngreso_triggered();
+
 private:
     Ui::EarnManage *ui;
-    QList<Product*> m_products;
+    Inventory m_inventory;
+    void onProductAdded(Product *newProduct);
 };
 #endif // EARNMANAGE_H

@@ -9,6 +9,7 @@ CONFIG += c++11
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
+    addproductform.cpp \
     inventory.cpp \
     main.cpp \
     earnmanage.cpp \
@@ -16,12 +17,14 @@ SOURCES += \
     product.cpp
 
 HEADERS += \
+    addproductform.h \
     earnmanage.h \
     inventory.h \
     newproductform.h \
     product.h
 
 FORMS += \
+    addproductform.ui \
     earnmanage.ui \
     newproductform.ui
 

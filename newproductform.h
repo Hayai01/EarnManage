@@ -16,6 +16,9 @@ public:
     explicit NewProductForm(QWidget *parent = nullptr);
     ~NewProductForm();
 
+signals:
+    void productAdded(Product *newProduct);
+
 private slots:
     void on_pushButton_released();
 

@@ -76,13 +76,17 @@ void Product::setUnits(int newUnits)
     m_units = newUnits;
 }
 
-QString Product::showInformation()
+QString Product::showInformation() const
 {
-    QString sellingPriceStr = QString::number(m_sellingPrice);
-    QString purchasePriceStr = QString::number(m_purchasePrice);
-    QString unitsStr = QString::number(m_units);
+    QString result;
+    result += "SKU: " + m_SKU + "\n";
+    result += "Name: " + m_name + "\n";
+    result += "Description: " + m_description + "\n";
+    result += "Selling Price: " + QString::number(m_sellingPrice) + "\n";
+    result += "Purchase Price: " + QString::number(m_purchasePrice) + "\n";
+    result += "Units: " + QString::number(m_units);
 
-    return m_SKU + " " + m_name + " " + m_description + " " + sellingPriceStr + " " + purchasePriceStr + " " + unitsStr;
+    return result;
 }
 
 
